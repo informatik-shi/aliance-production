@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isCurrentlyAtTop !== isAtTop) {
             if (isCurrentlyAtTop) {
                 // Пользователь наверху
-                // navbar.classList.remove('navbar-light');
-                logo.href.baseVal = "img/sprites.svg#logo";
+                navbar.classList.remove('navbar-light');
+                logo.href.baseVal = "img/sprites.svg#logo-light";
             } else {
                 // Пользователь опустился
                 
-                // navbar.classList.add('navbar-light');
-                logo.href.baseVal = "img/sprites.svg#logo-light";
+                navbar.classList.add('navbar-light');
+                logo.href.baseVal = "img/sprites.svg#logo";
             }
             isAtTop = isCurrentlyAtTop;
         }
