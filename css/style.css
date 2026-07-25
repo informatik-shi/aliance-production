@@ -24,12 +24,15 @@ body {
     align-items: center;
     color: #FFF;
     height: 94px;
-    position: relative;
+    position: fixed;
     z-index: 2;
     width: 100%;
+    left: 0;
+    top: 0;
     border-bottom: 1px solid rgba(235, 235, 240, 0.2);
 }
 .header {
+    padding-top: 94px;
     min-height: 100vh;
 }
 .header-image {
