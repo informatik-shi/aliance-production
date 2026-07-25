@@ -30,6 +30,14 @@ body {
     left: 0;
     top: 0;
     border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+    transition: background-color 0.2s;
+}
+.navbar-light {
+    background: #FFF;
+    color: #292d33;
+}
+.navbar-light .header-logo-path {
+    fill: #292d33;
 }
 .header {
     padding-top: 94px;
