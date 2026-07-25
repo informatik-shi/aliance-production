@@ -2,20 +2,55 @@
     box-sizing: border-box;
     
 }
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('BebasNeueRegular.eot');
+	src: url('../fonts/BebasNeueRegular.woff') format('woff'),
+
+	font-weight: normal;
+	font-style: normal;
+}
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
 }
-
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
 .navbar {
-    background: #5f5f5f;
+    /* background: #5f5f5f; */
     display: flex;
     align-items: center;
     color: #FFF;
     height: 94px;
+    position: relative;
+    border-bottom: 1px solid rgba(235, 235, 240, 0.2);
+}
+.header {
+    min-height: 100vh;
+}
+.header-image {
+    background-image: url('../img/main_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.header-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(41,45,51,0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 .header-logo {
     padding: 25px 50px;
+    border-right: 1px solid rgba(235, 235, 240, 0.2);;
+    height: 100%;
 }
 .header-nav {
     
@@ -43,20 +78,69 @@ body {
     margin-right: 50px;
 }
 .button {
+    display: inline-block;
     font-weight: 600;
     font-size: 16px;
     line-height: 160%;
     color: #FFF;
     background: #3A71D1;
     padding: 25px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    cursor: pointer;
     border: none;
-    flex-shrink: 0;
+    
 }
-
+.navbar-button {
+    flex-shrink: 0;
+    height: 100%;
+}
 .header-button {
     height: 100%;
+}
+.separator {
+    background: #5c8ee6;
+    width: 150px;
+    height: 2px;
+}
+.header-content {
+    padding-top: 150px;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+}
+.header-title {
+    max-width: 1080px;
+    font-family: "Bebas Neue";
+    font-size: 80px;
+    line-height: 120%;
+    
+}
+.header-text {
+    max-width: 720px;
+    margin: 30px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    margin-bottom: 50px;
+}
+.header-features {
+    display: flex;
+    min-height: 168px;
+    padding: 0;
+    margin-top: 100px;
+    list-style: none;
+    color: #FFF;
+    position: relative;
+}
+.header-features-item {
+    padding: 30px 50px;
+    border: 1px solid rgba(235, 235, 240, 0.2);
+}
+.header-features-item:not(:last-child) {
+    border-right: none;
+}
+.header-feature-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160px;
 }
