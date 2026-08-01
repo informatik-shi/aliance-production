@@ -2,7 +2,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar')
     const logo = document.querySelector('.logo-svg use')
-    
+    const mMenuToggle = document.querySelector('.mobile-menu-toggle')
+    const menu =  document.querySelector('.mobile-menu')
     // Проверяем, что элементы существуют
     if (!navbar || !logo) {
         console.error('Элементы navbar или logo не найдены');
@@ -45,4 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Вызываем сразу, чтобы установить начальное состояние
     updateNavbar();
+
+    mMenuToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        menu.classList.toggle('is-open')
+    })
 });
